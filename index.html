@@ -116,14 +116,26 @@ strong{color:var(--text);font-weight:500}
 .tcard:hover{background:var(--d4)}
 .tcard::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--primary);transition:height .3s}
 .tcard:hover::before{height:100%}
-.avatar{width:56px;height:56px;border-radius:50%;background:var(--d4);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:20px;color:var(--primary);margin-bottom:18px;transition:border-color .2s;flex-shrink:0}
-.tcard:hover .avatar{border-color:var(--red)}
+.avatar{width:56px;height:56px;border-radius:50%;background:var(--d4);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:20px;color:var(--primary);margin-bottom:18px;transition:border-color .2s;flex-shrink:0;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%}
+.tcard:hover .avatar{border-color:var(--primary)}
 .tname{font-family:var(--fd);font-size:21px;letter-spacing:1px;color:var(--text);margin-bottom:3px}
-.trole{font-family:var(--fm);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+.trole{font-family:var(--fm);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--primary);margin-bottom:14px}
 .tdesc{font-size:12px;color:var(--off);line-height:1.6}
 .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px}
 .tag{font-family:var(--fm);font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--off);border:1px solid var(--border);padding:3px 7px;border-radius:2px;transition:border-color .2s,color .2s}
 .tcard:hover .tag{border-color:var(--primary-dim);color:var(--text)}
+
+/* TUTORIALS */
+.tutorials-s{background:var(--d2);padding:110px 48px}
+.tutorial-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border)}
+.tutorial-card{background:var(--d3);padding:36px;transition:background .2s,border-color .2s;border:1px solid transparent}
+.tutorial-card:hover{background:var(--d4);border-color:var(--primary)}
+.tutorial-k{font-family:var(--fm);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--primary);margin-bottom:10px}
+.tutorial-t{font-family:var(--fd);font-size:30px;letter-spacing:1px;line-height:1.05;margin-bottom:12px}
+.tutorial-d{font-size:13px;color:var(--off);line-height:1.7;margin-bottom:10px}
+.tutorial-link{display:inline;text-decoration:underline;font-family:var(--fb);font-size:14px;letter-spacing:0;text-transform:none;color:var(--text);border:none;padding:0;transition:color .2s}
+.tutorial-link:hover{color:var(--primary)}
 
 /* COMPETITION */
 .comp-s{background:var(--bg);padding:110px 48px}
@@ -170,6 +182,7 @@ footer{background:var(--bg);padding:40px 48px;display:flex;align-items:center;ju
   .about{grid-template-columns:1fr}
   .tgrid{grid-template-columns:1fr}
   .cgrid{grid-template-columns:1fr}
+  .tutorial-grid{grid-template-columns:1fr}
   .ccard.feat{grid-template-columns:1fr}
   .pillars{grid-template-columns:1fr}
   .team-hdr{flex-direction:column;align-items:flex-start}
@@ -181,10 +194,12 @@ footer{background:var(--bg);padding:40px 48px;display:flex;align-items:center;ju
 <body>
 
 <nav>
-  <a href="#"><img src="WhatsApp Image 2026-04-15 at 16.20.10.jpeg" alt="Integrum Logo" class="logo"></a>
+  <a href="#"><img src="assets/logo_racing.png" alt="Integrum Logo" class="logo"></a>
   <ul class="nav-links">
     <li><a href="#about">What is STEM Racing</a></li>
     <li><a href="#mission">Mission</a></li>
+    <li><a href="#tutorials">Tutorials</a></li>
+    <li><a href="#team">Our Team</a></li>
     <li><a href="#competition">Competition</a></li>
   </ul>
   <a href="https://www.instagram.com/integrum.racing?igsh=MW10eTZwcG9ycGh1Mg==" class="nav-pill" target="_blank">Instagram</a>
@@ -204,7 +219,7 @@ footer{background:var(--bg);padding:40px 48px;display:flex;align-items:center;ju
     <div class="stats">
       <div class="stat"><div class="snum">65<span>+</span></div><div class="slabel">Countries</div></div>
       <div class="stat"><div class="snum">20<span>m</span></div><div class="slabel">Race track</div></div>
-      <div class="stat"><div class="snum">6</div><div class="slabel">Team members</div></div>
+      <div class="stat"><div class="snum">5</div><div class="slabel">Team members</div></div>
     </div>
   </div>
 
@@ -309,6 +324,78 @@ footer{background:var(--bg);padding:40px 48px;display:flex;align-items:center;ju
     <div class="pill"><div class="pill-n">01</div><div class="pill-t">Compete</div><div class="pill-d">Push our engineering to the absolute limit. Design the fastest, most aerodynamically refined car we can build — and race it to victory on the world stage.</div></div>
     <div class="pill"><div class="pill-n">02</div><div class="pill-t">Represent</div><div class="pill-d">Carry the Kazakh flag at every competition. Show the world that Almaty produces engineers who think globally and work to international standards.</div></div>
     <div class="pill"><div class="pill-n">03</div><div class="pill-t">Inspire</div><div class="pill-d">Every student who watches us should leave thinking: "I could do that." We are not just racing — we are building a movement for STEM in Central Asia.</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TUTORIALS -->
+<section id="tutorials" class="tutorials-s">
+  <div class="slbl rv">Tutorials</div>
+  <h2 class="rv d1">CAD LEARNING<br>HUB</h2>
+  <div class="tutorial-grid rv d2">
+    <article class="tutorial-card">
+      <div class="tutorial-k">Video 01</div>
+      <h3 class="tutorial-t">How to customise your F1 Car for STEM Racing</h3>
+      <p class="tutorial-d">Our first CAD tutorial covering practical customization tips to improve design quality and prepare your car for race-ready development.</p>
+      <a class="tutorial-link" href="https://youtu.be/83GL5dDakjA" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+    </article>
+    <article class="tutorial-card">
+      <div class="tutorial-k">Video 02</div>
+      <h3 class="tutorial-t">How to create wings for STEM Racing Car</h3>
+      <p class="tutorial-d">A focused walkthrough on designing front and rear wings for better aerodynamic balance and overall race performance.</p>
+      <a class="tutorial-link" href="https://www.youtube.com/watch?v=q_eGRMcxtXc" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+    </article>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TEAM -->
+<section id="team" class="team-s">
+  <div class="team-hdr">
+    <div>
+      <div class="slbl rv">Our Team</div>
+      <h2 class="rv d1">THE PEOPLE<br>BEHIND INTEGRUM</h2>
+    </div>
+    <p class="team-hdr-r rv d2">Five students, one mission: engineer a world-class STEM Racing car and represent Almaty with speed, precision, and purpose.</p>
+  </div>
+  <div class="tgrid">
+    <article class="tcard rv">
+      <div class="avatar"><img src="assets/askar.png" alt="Smadiyarov Askar"></div>
+      <div class="tname">Smadiyarov Askar</div>
+      <div class="trole">Designer &amp; Engineer</div>
+      <p class="tdesc">Responsible for the team's visual identity and overall style — creating designs, logos, and branding to make everything look professional. Combines design and engineering so the car is not only visually strong but also high-performing.</p>
+      <div class="tags"><span class="tag">design</span><span class="tag">branding</span><span class="tag">engineering</span></div>
+    </article>
+    <article class="tcard rv d1">
+      <div class="avatar"><img src="assets/ansar.png" alt="Sagatov Ansar"></div>
+      <div class="tname">Sagatov Ansar</div>
+      <div class="trole">CADer &amp; Engineer</div>
+      <p class="tdesc">Focuses on the technical side of the project — working with calculations, designing components, and improving car performance. Handles data and optimization to ensure everything runs as efficiently as possible.</p>
+      <div class="tags"><span class="tag">cad</span><span class="tag">calculations</span><span class="tag">optimization</span></div>
+    </article>
+    <article class="tcard rv d2">
+      <div class="avatar"><img src="assets/arman.png" alt="Temirbulatov Arman"></div>
+      <div class="tname">Temirbulatov Arman</div>
+      <div class="trole">Aerodynamics · Engineer &amp; CADer</div>
+      <p class="tdesc">Designs the car's shape and creates detailed 3D models of its parts. Ensures smooth airflow to reduce drag and increase speed, turning ideas into accurate digital designs that can be built in real life. Goal: a car that is both fast and precisely engineered.</p>
+      <div class="tags"><span class="tag">aerodynamics</span><span class="tag">cad</span><span class="tag">3d modelling</span></div>
+    </article>
+    <article class="tcard rv d1">
+      <div class="avatar"><img src="assets/alemger.png" alt="Baipeissov Alemger"></div>
+      <div class="tname">Baipeissov Alemger</div>
+      <div class="trole">Enterprise Manager</div>
+      <p class="tdesc">Manages the business side of the team — budgeting, sponsorships, and planning to ensure the resources are in place. Promotes the team and communicates with partners, keeping everything organised and supporting the team's success.</p>
+      <div class="tags"><span class="tag">enterprise</span><span class="tag">sponsorships</span><span class="tag">planning</span></div>
+    </article>
+    <article class="tcard rv d2">
+      <div class="avatar"><img src="assets/kamila.png" alt="Yertiskyzy Kamila"></div>
+      <div class="tname">Yertiskyzy Kamila</div>
+      <div class="trole">Engineer</div>
+      <p class="tdesc">Responsible for the mechanical design and structure of the car — developing parts, ensuring precision, and making sure everything functions properly. Her goal is to build a car that is both reliable and fast.</p>
+      <div class="tags"><span class="tag">mechanical</span><span class="tag">precision</span><span class="tag">engineering</span></div>
+    </article>
   </div>
 </section>
 
