@@ -1,0 +1,12 @@
+{
+  "name": "itmsit",
+  "version": "1.0.0",
+  "description": "Integrum STEM Racing website",
+  "main": "site",
+  "scripts": {
+    "dev": "npx http-server -p 3000 -o"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
